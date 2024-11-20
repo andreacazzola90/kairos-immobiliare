@@ -1,0 +1,52 @@
+/*
+Theme Name: Inspiro Child
+Template: inspiro
+*/
+
+@import url("../inspiro/style.css");
+
+
+/* .widget_wpc_filters_widget{ 
+    .wpc-filters-widget-wrapper{
+        display: flex;
+        gap: 1rem;
+        .wpc-filter-layout-search-field,
+        .wpc-filter-layout-submit-button{
+            width: 10%;
+        }
+    }
+} */
+
+.widget_wpc_filters_widget {
+    .wpc-filters-widget-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "wpc-filters-section wpc-filters-section wpc-filters-section . . . . ."
+            "wpc-filter-layout-search-field wpc-filter-layout-search-field wpc-filter-layout-search-field wpc-filter-layout-search-field wpc-filter-layout-submit-button wpc-filter-layout-submit-button";
+        .wpc-instead-of-posts-found{
+            grid-column-start: 0;
+            grid-column-end: 0;
+        }
+        .wpc-instead-of-posts-found{
+            grid-row: 3;
+            grid-column: 1; 
+        }
+        .wpc-filters-section{
+        }
+        .wpc-filter-layout-search-field{
+             grid-row: 2;
+             grid-column: 1/5;
+        }
+        .wpc-filter-layout-submit-button {
+            grid-row: 2;
+            grid-column: 5/7;
+            width: 100%;
+            height: fit-content;
+            margin-top:50px;
+        }
+    }
+}

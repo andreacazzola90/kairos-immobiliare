@@ -1,0 +1,10 @@
+uploads/*
+updraft/*
+fonts/*
+languages/*
+plugins/*
+mu-plugins/*
+
+themes/*
+!themes/inspiro-child
+index.php
